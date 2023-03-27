@@ -63,7 +63,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void StopWalkSlow();
 
-	UFUNCTION(BlueprintImplementableEvent, Category="Interaction")
+	UFUNCTION(BlueprintImplementableEvent, Category="Character Interaction")
 	void Interact();
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Character Interaction")
+	void Pasue();
 };

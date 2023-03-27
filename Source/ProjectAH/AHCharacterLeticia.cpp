@@ -22,9 +22,7 @@ AAHCharacterLeticia::AAHCharacterLeticia()
 	isSprint = false;
 	isWalkSlow = false;
 	PlayerMovementComponent = GetCharacterMovement();
-	DefaultWalkSpeed = PlayerMovementComponent->MaxWalkSpeed;
-
-	
+	DefaultWalkSpeed = PlayerMovementComponent->MaxWalkSpeed;	
 }
 
 // Called when the game starts or when spawned
@@ -62,6 +60,7 @@ void AAHCharacterLeticia::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	PlayerInputComponent->BindAction("Walk Slow", IE_Released, this, &AAHCharacterLeticia::StopWalkSlow);
 
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &AAHCharacterLeticia::Interact);
+	PlayerInputComponent->BindAction("Pause", IE_Pressed, this, &AAHCharacterLeticia::Pasue);
 
 
 }
@@ -117,4 +116,3 @@ void AAHCharacterLeticia::StopWalkSlow()
 	isWalkSlow = false;
 	PlayerMovementComponent->MaxWalkSpeed = DefaultWalkSpeed;
 }
-
