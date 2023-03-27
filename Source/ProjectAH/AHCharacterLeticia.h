@@ -67,5 +67,5 @@ public:
 	void Interact();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Character Interaction")
-	void Pasue();
+	void Pause();
 };
