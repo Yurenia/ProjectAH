@@ -35,12 +35,13 @@ public:
 
 	bool isSprint; // 캐릭터가 스프린트 상태인가?
 	bool isWalkSlow; // 캐릭터가 천천히 걷는 상태인가? 
-	float DefaultWalkSpeed; // 캐릭터의 걷기 속도 기본값
 
-	UPROPERTY(EditAnywhere, Category = "Funtion Test")
+	UPROPERTY(EditAnywhere, Category = "Character Sprint")
+	float DefaultWalkSpeed; // 캐릭터의 걷기 속도 기본값
+	UPROPERTY(EditAnywhere, Category = "Character Sprint")
 	float SprintSpeedRate; // 스프린트 속도 비율
 	
-	UPROPERTY(EditAnywhere, Category = "Funtion Test")
+	UPROPERTY(EditAnywhere, Category = "Character Sprint")
 	float WalkSlowSpeedRate; // 느리게 걷기 속도 비율
 
 	UCharacterMovementComponent* PlayerMovementComponent;
@@ -67,5 +68,5 @@ public:
 	void Interact();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Character Interaction")
-	void Pause();
+	void CallPauseMenu();
 };

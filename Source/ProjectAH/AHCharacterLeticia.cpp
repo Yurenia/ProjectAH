@@ -60,7 +60,7 @@ void AAHCharacterLeticia::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	PlayerInputComponent->BindAction("Walk Slow", IE_Released, this, &AAHCharacterLeticia::StopWalkSlow);
 
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &AAHCharacterLeticia::Interact);
-	PlayerInputComponent->BindAction("Pause", IE_Pressed, this, &AAHCharacterLeticia::Pause);
+	PlayerInputComponent->BindAction("Pause", IE_Pressed, this, &AAHCharacterLeticia::CallPauseMenu);
 
 
 }
