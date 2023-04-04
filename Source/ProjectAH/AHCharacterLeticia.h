@@ -46,27 +46,27 @@ public:
 
 	UCharacterMovementComponent* PlayerMovementComponent;
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintInternalUseOnly)
 	void MoveForward(float Value);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintInternalUseOnly)
 	void MoveRight(float Value);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintInternalUseOnly)
 	void StartSprint();
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintInternalUseOnly)
 	void StopSprint();
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintInternalUseOnly)
 	void StartWalkSlow();
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintInternalUseOnly)
 	void StopWalkSlow();
 
 	UFUNCTION(BlueprintImplementableEvent, Category="Character Interaction")
-	void Interact();
+	void InteractEvent();
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Character Interaction")
-	void CallPauseMenu();
+	void CallPauseMenuEvent();
 };
